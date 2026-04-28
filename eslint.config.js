@@ -50,6 +50,7 @@ export default defineConfig([
             "@typescript-eslint/prefer-nullish-coalescing": "warn",
             "@typescript-eslint/prefer-optional-chain": "warn",
             "@typescript-eslint/restrict-template-expressions": "off",
+            "@typescript-eslint/explicit-function-return-type": "off",
 
             "no-console": ["warn", { allow: ["warn", "error"] }],
             "no-debugger": "error",

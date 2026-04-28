@@ -1,0 +1,136 @@
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 0.5rem;
+    cursor: pointer;
+    border-radius: 14px;
+    transition: background 0.18s;
+    animation: itemIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    user-select: none;
+    cursor: grab;
+}
+
+.todo-item:hover {
+    background: rgba(232, 168, 124, 0.1);
+}
+
+.todo-item:active {
+    cursor: grabbing;
+}
+
+@keyframes itemIn {
+    from {
+        opacity: 0;
+        transform: translateX(-14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.todo-empty {
+    opacity: 0.6;
+}
+
+.checkbox-wrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    border: 2.5px solid var(--check-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: transparent;
+    flex-shrink: 0;
+}
+
+.checkbox.checked {
+    background: var(--check-green);
+    border-color: var(--check-green);
+    transform: scale(1.08);
+}
+
+.checkbox.checkbox-empty {
+    border-style: dashed;
+    opacity: 0.5;
+}
+
+.checkbox svg {
+    width: 14px;
+    height: 14px;
+}
+
+.todo-text {
+    font-family: "Caveat", cursive;
+    font-size: var(--todo-size, 1.35rem);
+    font-weight: 600;
+    color: var(--brown);
+    line-height: 1.2;
+    transition:
+        font-size 0.25s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.todo-checked .todo-text {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--accent);
+    opacity: 0.7;
+}
+
+.todo-placeholder {
+    font-family: "Caveat", cursive;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+}
+
+.todo-adding {
+    background: rgba(232, 168, 124, 0.08);
+}
+
+.todo-input {
+    font-family: "Caveat", cursive;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--brown);
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    caret-color: var(--accent);
+}
+
+.todo-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
