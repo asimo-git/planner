@@ -1,5 +1,5 @@
 import "./App.css";
-import { TodoList } from "./components/todoList";
+import { TodoList } from "./components/TodoList";
 
 function App() {
     const today = new Date().toLocaleDateString("ru-RU", {
