@@ -1,4 +1,5 @@
 import "./App.css";
+import { PeekingCat } from "./components/PeekingCat";
 import { TodoList } from "./components/TodoList";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                 <p className="date">{today}</p>
             </div>
             <TodoList />
+            <PeekingCat />
         </div>
     );
 }

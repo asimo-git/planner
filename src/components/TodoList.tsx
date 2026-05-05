@@ -35,8 +35,6 @@ export function TodoList() {
         setArchives(loaded.archives);
         setDailyReview(loaded.review);
 
-        // Сохраняем только если нет ревью (новый день без вчерашних задач,
-        // или вообще нет данных в LS)
         if (!loaded.review) {
             savePlannerState(todayStamp, loaded.activeTodos, loaded.archives);
         }
